@@ -6,7 +6,6 @@
 .newsletter {
   position: relative;
   width: 100vw;
-  height: 100vh;
 
   overflow: hidden;
   display: flex;
@@ -80,15 +79,21 @@
       border: 1px solid #153564;
       border-radius: 8px;
       padding: 12px;
-      margin-bottom: 15px;
+
       outline: #011b42;
+    }
+
+    &__span {
+      color: red;
+      font-size: 10px;
     }
 
     &__button {
       border: 1px solid #153564;
       border-radius: 8px;
       padding: 12px;
-      margin-bottom: 15px;
+      margin: 15px 0;
+
       opacity: 1;
       background-color: #153564;
       color: white;
@@ -100,6 +105,7 @@
 
 @media (min-width: 768px) {
   .newsletter {
+    height: 100vh;
     flex-direction: row-reverse;
     padding: 20px;
     justify-content: space-evenly;

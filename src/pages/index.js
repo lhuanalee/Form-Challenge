@@ -3,22 +3,20 @@ import useState from "react";
 import Image from "next/image";
 import { useFormik } from "formik";
 
-import * as Yup from "yup";
+import { object, string } from "yup";
 
 export default function Home() {
-  const formSchema = Yup.object().shape({
-    email: Yup.string()
-      .required("Required email")
-      .email("Digite um e-mail válido!"),
+  const validationSchema = object().shape({
+    email: string().email("Invalid email address!").required("Required field!"),
   });
 
   const formik = useFormik({
     initialValues: {
       email: "",
     },
-    formSchema,
+    validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log("Valores do formulário:", values);
+      console.log(values);
     },
   });
 
@@ -69,14 +67,15 @@ export default function Home() {
           </label>
           <input
             className={styles.section__input}
-            id="E-mail"
             type="email"
-            {...formik.getFieldProps("email")}
+            name="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
           />
-
-          {formik.touched.email && formik.errors.email && (
-            <div>{console.log(formik.errors.email)}</div>
-          )}
+          {formik.touched.email && formik.errors.email ? (
+            <span className={styles.section__span}>{formik.errors.email}</span>
+          ) : null}
           <button className={styles.section__button} type="submit">
             Subscribe to monthly newsletter!
           </button>

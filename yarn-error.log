@@ -1,0 +1,45 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\leelh\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add formik
+
+PATH: 
+  C:\Users\leelh\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\leelh\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\dotnet;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\leelh\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\leelh\AppData\Local\Programs\Python\Python311;C:\Users\leelh\AppData\Local\Microsoft\WindowsApps;C:\Users\leelh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\leelh\AppData\Roaming\npm;C:\Program Files\PostgreSQL\15\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\leelh\AppData\Local\Yarn\Cache\v6\npm-next-13.4.7-2ab20e6fada2e25cb81bd17f68956705ffd9824e-integrity\node_modules\next\package.json' -> 'C:\Users\leelh\Documents\Programação\OKN\Form Challenge\Form-Challenge\node_modules\next\package.json'
+
+npm manifest: 
+  {
+    "name": "form-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "next dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "next": "^13.4.7",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "sass": "^1.63.6",
+      "yup": "^1.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

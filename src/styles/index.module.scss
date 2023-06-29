@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Genshin";
+  src: url(".././../public/zh-cn.ttf") format("truetype");
+}
+
+.newsletter {
+  position: relative;
+  width: 100vw;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Genshin";
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  .section {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+    gap: 15px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    opacity: 0.7;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    &__title {
+      font-size: 24px;
+      font-family: "Genshin";
+      color: #153564;
+      opacity: 1;
+    }
+
+    &__description {
+      font-size: 15px;
+      color: #011b42;
+    }
+
+    &__check {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #153564;
+    }
+
+    &__text {
+      font-size: 12px;
+      color: #153564;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__label {
+      /* Estilos para a label original */
+      padding: 13px;
+
+      position: absolute;
+      left: 20px;
+
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+
+      pointer-events: none;
+
+      transition: 0.5s;
+      font-size: 12px;
+      color: #153564;
+
+      &__input:focus {
+        /* Estilos para a label quando o input for tocado */
+        padding: 0 10px;
+
+        border-left: 1px solid green;
+        border-right: 1px solid green;
+
+        font-size: 0.65em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        color: green;
+        background: white;
+
+        transform: translateX(10px) translateY(-5px);
+      }
+    }
+
+    &__input {
+      border: 1px solid #153564;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    &__button {
+      border: 1px solid #153564;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 15px;
+      opacity: 1;
+      background-color: #153564;
+      color: white;
+      font-family: "Genshin";
+    }
+  }
+}

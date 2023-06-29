@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "yarn install && next build",
+    "prepare": "npm install && next build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev"
   },

@@ -29,6 +29,7 @@ export default function Home() {
       </video>
       <figure className={styles.newsletter__logo}>
         <Image
+          className={styles.newsletter__image}
           src="/GenshinImact.png"
           width={350}
           height={220}
@@ -63,15 +64,16 @@ export default function Home() {
         </div>
 
         <form onSubmit={formik.handleSubmit} className={styles.section__form}>
+          <label className={styles.section__label} htmlFor="E-mail">
+            E-mail
+          </label>
           <input
             className={styles.section__input}
             id="E-mail"
             type="email"
             {...formik.getFieldProps("email")}
           />
-          <label className={styles.section__label} htmlFor="E-mail">
-            E-mail
-          </label>
+
           {formik.touched.email && formik.errors.email && (
             <div>{console.log(formik.errors.email)}</div>
           )}

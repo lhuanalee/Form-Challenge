@@ -2,10 +2,12 @@ import styles from "../styles/index.module.scss";
 import useState from "react";
 import Image from "next/image";
 import { useFormik } from "formik";
-
+import { useRouter } from "next/router";
 import { object, string } from "yup";
 
 export default function Home() {
+  const router = useRouter();
+
   const validationSchema = object().shape({
     email: string().email("Invalid email address!").required("Required field!"),
   });
@@ -17,6 +19,7 @@ export default function Home() {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(values);
+      router.push("/sucess");
     },
   });
 

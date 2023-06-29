@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Genshin";
+  src: url(".././../public/zh-cn.ttf") format("truetype");
+}
+
+.sucess {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Genshin";
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .box {
+    width: 70%;
+    max-width: 340px;
+    padding: 15px;
+    background-color: white;
+    opacity: 0.7;
+    border: 1px solid transparente;
+    border-radius: 8px;
+    color: #153564;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__link {
+      border: 1px solid #153564;
+      border-radius: 8px;
+      padding: 12px;
+
+      opacity: 1;
+      background-color: #153564;
+      color: white;
+      font-family: "Genshin";
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
